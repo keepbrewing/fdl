@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Beat It!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="sound-player" id="soundPlayer1">
+      <h2>Level 1</h2>
+      <audio controls>
+          <source src="lvl1.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+      </audio>
+  </div>
+  
+  <div class="sound-player" id="soundPlayer2">
+      <h2>Level 2</h2>
+      <audio controls>
+          <source src="lvl2.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+      </audio>
+  </div>
+  
+  <div class="sound-player" id="soundPlayer3">
+      <h2>Level 3</h2>
+      <audio controls>
+          <source src="lvl3.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+      </audio>
+  </div>
+  
+    <div id="sequenceDisplay" class="sequence-display"></div>
+
+  <div class="keys">
+    <div data-key="65" class="key">
+      <kbd>A</kbd>
+      <span class="sound">clap</span>
+    </div>
+    <div data-key="83" class="key">
+      <kbd>S</kbd>
+      <span class="sound">hihat</span>
+    </div>
+    <div data-key="68" class="key">
+      <kbd>D</kbd>
+      <span class="sound">kick</span>
+    </div>
+    <div data-key="70" class="key">
+      <kbd>F</kbd>
+      <span class="sound">openhat</span>
+    </div>
+    <div data-key="71" class="key">
+      <kbd>G</kbd>
+      <span class="sound">boom</span>
+    </div>
+    <div data-key="72" class="key">
+      <kbd>H</kbd>
+      <span class="sound">ride</span>
+    </div>
+    <div data-key="74" class="key">
+      <kbd>J</kbd>
+      <span class="sound">snare</span>
+    </div>
+    <div data-key="75" class="key">
+      <kbd>K</kbd>
+      <span class="sound">tom</span>
+    </div>
+    <div data-key="76" class="key">
+      <kbd>L</kbd>
+      <span class="sound">tink</span>
+    </div>
+  </div>
+  <div class="controls">
+    <button id="resetButton">
+      <span class="front">
+        Reset Sequence
+      </span>
+    </button>
+    <div class="tooltip controls">
+      <span class="front">
+        Click for hint
+      </span>
+      <span class="tooltiptext">Tooltip text</span>
+    </div>
+</div>
+
+  <audio data-key="65" src="clap.wav"></audio>
+  <audio data-key="83" src="hihat.wav"></audio>
+  <audio data-key="68" src="kick.wav"></audio>
+  <audio data-key="70" src="openhat.wav"></audio>
+  <audio data-key="71" src="boom.wav"></audio>
+  <audio data-key="72" src="ride.wav"></audio>
+  <audio data-key="74" src="snare.wav"></audio>
+  <audio data-key="75" src="tom.wav"></audio>
+  <audio data-key="76" src="tink.wav"></audio>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1 id="modal-message"></h1>
+    </div>
+</div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lobster&family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Lobster&display=swap');
+
+html{
+    font-size: 10px;
+    background: url(bg.jpg);
+    background-size: cover;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Play', sans-serif;
+}
+
+.keys {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.key{
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all .11s ease;
+    width: 10rem;
+    text-align: center;
+    color: black;
+    background: yellow;
+    font-weight: bolder;
+    box-shadow: 10px 10px black;
+}
+
+kbd{
+    display: block;
+    font-size: 4rem;
+    opacity: 0.8;
+}
+
+.sound{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #ffc600;
+}
+
+.playing{
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+    opacity: 1;
+}
+
+footer{
+    font-family: 'Montserrat', san-serif;
+    color: #ff9999;
+}
+
+/* CSS for the modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  text-align: center;
+}
+
+.close {
+  color: #888;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+#resetButton {
+  background: hsl(340deg 100% 32%);
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  margin: 15px;
+}
+
+.front {
+  display: block;
+  text-transform: uppercase;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-size: 2rem;
+  font-family: 'Play', sans-serif;
+  background: hsl(345deg 100% 47%);
+  color: white;
+  transform: translateY(-6px);
+}
+
+#resetButton:active .front {
+  transform: translateY(-2px);
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  background: hsl(340deg 100% 32%);
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  margin: 15px;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  font-size: 4rem;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+}
+
+.tooltip:active .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip:active .front {
+  transform: translateY(-2px);
+}
+
+.sequence-display {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin: 20px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 5px 5px yellow;
+}
+
+.sound-player{
+  background-color: #000;
+  color: #fefefe;
+  padding: 10px;
+  margin: 10px;
+  text-transform: uppercase;
+}
+
+audio {
+  filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+  width: 200px;
+  height: 25px;
+}
+
+#letter{
+  font-weight: lighter;
+  font-family: 'Homemade Apple';
+}
+
+#affirm div {
+  box-shadow: 4px 4px black;
+  margin: 20px 0px 10px 0px;
+  background-color: #ffc600;
+}
+
+#affirm div:hover {
+  border: 1px solid #777;
+}
+
+#affirm div img {
+  width: 100%;
+  height: auto;
+}
+
+#affirm div p{
+  padding: 15px;
+  text-align: center;
+  font-family: 'Architects Daughter', cursive;
+  font-weight: lighter;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#endGameContent img{
+  width: 100%;
+}
+
+#loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  z-index: 9999;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
