@@ -253,3 +253,74 @@ audio {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/* Style for the game instructions modal */
+
+#instructionsModal .modal-content {
+  background-color: #333; /* Dark background color */
+  width: 60%;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  color: #fff; /* Text color */
+  transform: scale(0.8); /* Initial scale for cool entry */
+  transition: transform 0.5s ease-in-out;
+}
+
+#instructionsModal .modal-content h1 {
+  font-size: 2.2rem; /* Increased header text size */
+  color: #f06; /* Text color */
+  background: linear-gradient(to bottom, #f06, #c903d1); /* Gradient background */
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  text-transform: uppercase;
+  margin: 10px 0;
+  transform: translateY(-10px); /* Initial transform for cool entry */
+  transition: transform 0.5s ease-in-out;
+}
+
+#instructionsModal .modal-content p {
+  font-size: 1.6rem; /* Text size */
+  margin: 20px 0;
+  transform: translateY(10px); /* Initial transform for cool entry */
+  transition: transform 0.5s ease-in-out;
+}
+
+#instructionsModal .modal-content ol {
+  list-style-type: none; /* Remove list numbers */
+  padding: 0; /* Remove default list padding */
+  transform: scale(0.8); /* Initial scale for cool entry */
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#instructionsModal .modal-content li {
+  font-size: 2rem; /* Increased text size */
+  margin: 20px 0;
+  text-align: left; /* Align text to the left */
+}
+
+#startGameButton {
+  background: #f06; /* Button background color */
+  color: #fff; /* Text color */
+  font-size: 1.6rem;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s ease-in-out;
+}
+
+#startGameButton:hover {
+  background: #c903d1; /* Hover background color */
+}

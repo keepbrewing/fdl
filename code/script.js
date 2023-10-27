@@ -55,6 +55,22 @@ function hideLoadingScreen() {
   
   // Preload all media.
   mediaToPreload.forEach(preloadMedia);
+
+  // Function to show the instructions modal
+function showInstructionsModal() {
+    const instructionsModal = document.getElementById('instructionsModal');
+    instructionsModal.style.display = 'block';
+
+    // Listen for the "Close" button click
+    const startGameButton = document.getElementById('startGameButton');
+    startGameButton.addEventListener('click', () => {
+        instructionsModal.style.display = 'none';
+    });
+}
+
+// Display the instructions modal when the page loads
+showInstructionsModal();
+
   
 function getSoundFromDataKey(dataKey) {
     return soundMapping[dataKey];
@@ -184,6 +200,7 @@ resetButton.addEventListener('click', () => {
     playerSequence.length = 0; // Reset the player's sequence
     sequenceDisplay.textContent = '';
 });
+
 
 
 const keys = Array.from(document.querySelectorAll('.key'));
